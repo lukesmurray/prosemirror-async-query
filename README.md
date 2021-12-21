@@ -5,6 +5,8 @@
 
 A simple declarative API for using promises in prosemirror plugin state.
 
+[Live Demo](https://prosemirror-async-query.vercel.app/)
+
 ## Installation
 
 ```sh
@@ -14,6 +16,10 @@ npm install prosemirror-async-query
 # yarn
 yarn add prosemirror-async-query
 ```
+
+## Documentation
+
+Coming Soon...
 
 ## Usage
 
