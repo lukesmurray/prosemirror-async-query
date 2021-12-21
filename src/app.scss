@@ -1,0 +1,78 @@
+@import "open-color/open-color.scss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  --text: #{$oc-gray-7};
+  --emphasis-text: #{$oc-gray-8};
+  --disabled-text: #{$oc-gray-5};
+  --caption-text: #{$oc-gray-6};
+  --background-surface-0: white;
+  --background-surface-1: #{$oc-gray-0};
+  --background-surface-2: #{$oc-gray-1};
+  --background-surface-0-hover: #{$oc-gray-1};
+  --background-surface-1-hover: #{$oc-gray-2};
+  --background-surface-2-hover: #{$oc-gray-3};
+  --element-border: #{$oc-gray-4};
+  --divider-border: #{$oc-gray-3};
+  --disabled-border: #{$oc-gray-2};
+  --accent: #{$oc-blue-5};
+}
+
+body {
+  background-color: var(--background-surface-0);
+  color: var(--text);
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+// editor and toolbar styles
+.tiptap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+// editor styles
+.editor {
+  // the root content editable styles
+  & > div {
+    background-color: var(--background-surface-1);
+    border: 1px solid var(--element-border);
+    padding: 0.5rem;
+  }
+}
+
+.consoleWrapper {
+  background-color: $oc-gray-9;
+  min-height: 2em;
+
+  max-height: 20em;
+  overflow-y: scroll;
+}
+
+.clearConsoleButton {
+  background-color: var(--background-surface-2);
+  border: 0px;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+
+  &:disabled {
+    color: var(--disabled-text);
+  }
+
+  &:hover:enabled {
+    background-color: var(--background-surface-2-hover);
+  }
+
+  width: max-content;
+}
