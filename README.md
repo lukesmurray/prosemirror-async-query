@@ -24,7 +24,10 @@ Coming Soon...
 ## Usage
 
 ```tsx
-new Plugin({
+import { AsyncQuery } from "prosemirror-async-query";
+import { Plugin, PluginKey } from "prosemirror-state";
+
+const exampleExtension = new Plugin({
   key: new PluginKey("async-example"),
   view(editor) {
     const pluginKey = this.key;
