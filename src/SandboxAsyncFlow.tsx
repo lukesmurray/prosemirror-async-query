@@ -14,6 +14,14 @@ export const SandboxAsyncFlow = () => {
 
   return (
     <div className="tiptap">
+      <h1>Prosemirror Async Query</h1>
+      <p>A simple declarative API for using promises in prosemirror plugin state.</p>
+      <p>
+        For more info, check the project out on{" "}
+        <a href="https://github.com/lukesmurray/prosemirror-async-query">github</a> or{" "}
+        <a href="https://www.npmjs.com/package/prosemirror-async-query">npm</a>.
+      </p>
+      <hr />
       <EditorContent className="editor" editor={editor} />
       <LogsContainer />
     </div>
