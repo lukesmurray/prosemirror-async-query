@@ -5,14 +5,14 @@ import { AsyncQuery } from "../lib/AsyncQuery";
 import { computeChangedRanges } from "./computeChangedRanges";
 
 interface AsyncFlowPluginState {
-  query: AsyncQuery;
-  queryResult: null;
+  query: AsyncQuery<string, string>;
+  queryResult: null | string;
 }
 
 export const AsyncFlowExtension = Extension.create({
   name: "async-flow",
   addProseMirrorPlugins() {
-    const self = this;
+    const self = this; // eslint-disable-line @typescript-eslint/no-this-alias
     return [
       new Plugin<AsyncFlowPluginState>({
         key: new PluginKey(self.name),
@@ -57,7 +57,7 @@ export const AsyncFlowExtension = Extension.create({
             if (prevQuery.statusChanged(tr, "success")) {
               return {
                 ...prev,
-                queryResult: prevQuery.data,
+                queryResult: prevQuery.data!,
               };
             }
 

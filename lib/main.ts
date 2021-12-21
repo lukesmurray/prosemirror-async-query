@@ -1,2 +1,2 @@
 export { AsyncQuery } from "./AsyncQuery";
-export type { MetaKey, QueryStatus } from "./AsyncQuery";
+export type { AsyncQueryOptions, AsyncQueryViewUpdateOptions, MetaKey, QueryStatus } from "./AsyncQuery";
