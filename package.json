@@ -62,7 +62,7 @@
     "sass": "^1.45.0",
     "tiny-invariant": "^1.2.0",
     "typescript": "^4.4.4",
-    "vite": "^2.7.2"
+    "vite": "^2.9.13"
   },
   "sideEffects": false,
   "version": "0.0.4"
